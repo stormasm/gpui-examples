@@ -1,3 +1,3 @@
-- file:://Users/ma/j/tmp08/zed/target/doc/gpui/trait.Styled.html)
+- [trait gpui::Styled](file::///Users/ma/j/tmp08/zed/target/doc/gpui/trait.Styled.html)
 - [tailwind main doc page](https://tailwindcss.com/docs/installation)
 - [css flexbox tricks](https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png)
