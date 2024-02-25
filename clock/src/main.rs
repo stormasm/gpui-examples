@@ -95,8 +95,15 @@ fn main() {
     App::new().run(|cx| {
         cx.activate(true);
         AppState::init(cx);
-        cx.open_window(WindowOptions::default(), |cx| {
-            cx.new_view(|cx| Wrapper::new(cx))
-        });
+        cx.open_window(
+            WindowOptions {
+                bounds: WindowBounds::Fixed(Bounds {
+                    origin: Default::default(),
+                    size: size(px(1000.), px(500.)).into(),
+                }),
+                ..Default::default()
+            },
+            |cx| cx.new_view(|cx| Wrapper::new(cx)),
+        );
     })
 }
