@@ -35,6 +35,20 @@ impl Render for HelloWorld {
                     .text_color(rgb(0xffffff))
                     .child(format!("B {}", &self.text)),
             )
+            .child(
+                div()
+                    .flex()
+                    .bg(rgb(0x2e7d32))
+                    .size(Length::Definite(Pixels(100.0).into()))
+                    .justify_center()
+                    .items_center()
+                    .shadow_lg()
+                    .border()
+                    .border_color(rgb(0x0000ff))
+                    .text_xl()
+                    .text_color(rgb(0xffffff))
+                    .child(format!("C {}", &self.text)),
+            )
     }
 }
 
@@ -48,7 +62,7 @@ fn main() {
                 }),
                 ..Default::default()
             },
-            |cx| cx.new_view(|_cx| HelloWorld { text: "B".into() }),
+            |cx| cx.new_view(|_cx| HelloWorld { text: "D".into() }),
         );
         cx.activate(true);
     });
